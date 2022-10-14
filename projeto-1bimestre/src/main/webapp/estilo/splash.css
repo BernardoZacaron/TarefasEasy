@@ -1,0 +1,235 @@
+/*.cab{
+    background-color: black;
+    color: red;
+    font-family: fantasy;
+    font-size: xx-large;
+    text-align: center;
+    vertical-align: middle;
+    height: 100px;
+    line-height: 100px;
+}*/
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.container{
+    display: grid;
+    background-color: #ccff33;
+    max-width: 480px;
+    height: 100vh;
+    margin: 0 auto;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+.container header{
+    grid-area: header;
+    background-color: #ccff33;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.container main{
+    grid-area: main;
+    background-color: grey;
+}
+
+.home{
+    grid-area: home;
+    margin: 5px;
+}
+
+.other{
+    grid-area: other;
+    margin: 10px;
+    align-content: initial;
+}
+
+.login{
+    grid-area: login;
+    margin:5px;
+}
+
+.mais-tarefa{
+    grid-area: maisTar;
+    margin-top: 15px;
+    right: 600px;
+    font-size: smaller;
+}
+
+.mais-categoria{
+    grid-area: maisCat;
+    margin-top: 15px;
+    align-content: center;
+    font-size: small;
+}
+
+.container footer{
+    grid-area: footer;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10% 10% 50% 12% 6% 12%;
+    grid-template-areas: 
+        "home login . maisCat . maisTar";
+    position: sticky;
+    bottom: 0;
+}
+
+.rodape{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+.rodape img{
+    width: 40px;
+}
+
+.title{
+    flex-grow: 1;
+}
+
+#titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+}
+
+.foto{
+    grid-area: foto;
+}
+
+.nome{
+    grid-area: nome;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    align-self: flex-start;
+}
+
+.titulo{
+    grid-area: titulo;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    align-self: flex-start;
+}
+
+.data{
+    grid-area: data;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    align-self: flex-start;
+}
+
+.card{
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "foto nome" 
+        "foto data";
+    padding: 5px;
+    border:1px solid black;
+}
+
+
+.btn-concluir{
+    grid-area: concluir;
+}
+.btn-editar{
+    grid-area: editar;
+}
+.btn-excluir{
+    grid-area: excluir;
+}
+
+.acoes{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "concluir" 
+        "editar"
+        "excluir";
+    border-left:1px solid black;    
+    grid-area: acoes;
+    padding: 2px;
+    padding-left: 4px;
+    align-items: center;
+}
+
+h1{
+    text-align: left;
+}
+
+main{
+    padding: 4%;
+}
+
+.table{
+    width: 90%;
+    margin: 10px;
+}
+
+.form-login{
+    margin: 10px;
+}
+
+.tarefa-prazo{
+    grid-area: prazo;
+    margin-top: -10px;
+}
+
+.categoria-cadastradas{
+    grid-area: cadastradas;
+}
+
+.categoria-concluidas{
+    grid-area: concluidas;
+}
+
+.categoria-pendentes{
+    grid-area: pendentes;
+}
+
+.categoria-info{
+    grid-area: info;
+}
+
+.card-tarefa{
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 4fr 5%;
+    grid-template-areas: 
+        "foto titulo acoes" 
+        "foto prazo acoes";
+    padding: 1%;
+    border:1px solid black;
+}
+
+.card-categoria{
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "foto titulo" 
+        "foto info";
+    padding: 5px;
+    border:1px solid black;
+}
+
+/*@media (max-width: 400px){
+    .container{
+        grid-template-areas: 
+            "footer footer footer"
+            ". main ."
+            "header header .";
+    }
+}*/
+
